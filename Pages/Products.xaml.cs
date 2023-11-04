@@ -41,10 +41,16 @@ namespace YourDoctor.Pages
             {
                 btnExportToExcel.Visibility = Visibility.Visible;
             }
+            if(!userRoles.Contains("Администратор"))
+            {
+                btnDelete.Visibility = Visibility.Collapsed;
+                btnUpdate.Visibility = Visibility.Collapsed;
+            }
             if (!userRoles.Contains("Фармацевт"))
             {
                 tbSearch.Visibility = Visibility.Collapsed;
             }
+
  
 
             con.Open();

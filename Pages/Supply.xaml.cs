@@ -41,6 +41,11 @@ namespace YourDoctor.Pages
             {
                 btnExportToExcel.Visibility = Visibility.Visible;
             }
+            if (!userRoles.Contains("Администратор"))
+            {
+                btnDelete.Visibility = Visibility.Collapsed;
+                btnUpdate.Visibility = Visibility.Collapsed;
+            }
 
             con.Open();
 
